@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+.card_wrp {
+    width: 600px;
+    height: auto;
+    background: #ffffff;
+    padding: 20px;
+    margin: 10px;
+
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.card_header {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.user {
+    padding-top: 10px;
+}
+
+.card_name {
+    line-height: 0;
+    color: rgb(90, 121, 180);
+
+}
+
+.card_status {
+    line-height: 16px;
+    padding-left: 25px;
+    background-image: url("../../../src/assets/icon.svg");
+
+
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.user p {
+    font-weight: 800;
+    font-size: 14px;
+
+
+}
+
+.user p span {
+    font-weight: 400;
+}
+
+.card_content {
+    color: rgb(63, 63, 63);
+    font-size: 28px;
+    line-height: 100%;
+    font-weight: 400;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card_header img,
+.card_footer img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px 20px 10px 0;
+}
+
+.card_footer {
+    position: relative;
+    display: flex;
+    /* align-items: stretch; */
+}
+
+.card_footer img {
+    width: 40px;
+    height: 40px;
+}
+
+.card_like_comment {
+    width: 100%;
+    border-top: solid 2px rgba(0, 0, 0, 0.1);
+    border-bottom: solid 2px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card_like,
+.card_comment {
+    font-size: 14px;
+    padding-left: 25px;
+    line-height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.card_like,
+.card_comment {
+    background-image: url("../../../src/assets/like.svg");
+}
+
+.card_comment {
+    background-image: url("../../../src/assets/comment.svg");
+}
+
+
+.write_comments {
+
+    display: block;
+    margin-top: 10px;
+    border-radius: 21px;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    height: 42px;
+    width: 500px;
+}
