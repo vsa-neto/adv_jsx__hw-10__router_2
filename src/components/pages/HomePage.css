@@ -1,12 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-* {
-    box-sizing: border-box;
+.cards_header {
+    display: flex;
+    width: calc(100% - 20px);
+    /* max-width: 600px; */
+    margin: 10px;
+    height: auto;
+    background-color: #ffffff;
+    padding: 5px 10px;
 }
 
+
+.cards_header button {
+    color: #ffffff;
+    background-color: rgb(73, 107, 178);
+    line-height: 10px;
+    border-radius: 3px;
+    padding: 8px 8px 10px;
+    margin-left: auto;
+}
+
+.cards_header button:hover {
+       background-color: rgb(84, 128, 222);
+}
+.cards_header button:active {
+    outline: none;
+    border: rgb(73, 107, 178);
+}
+
+
 .card_wrp {
-    width: 600px;
+     width: calc(100% - 20px);
+    /* max-width: 600px; */
     height: auto;
     background: #ffffff;
     padding: 20px;
@@ -31,7 +56,7 @@
 
 .card_name {
     line-height: 0;
-    color: rgb(90, 121, 180);
+    color: rgb(73, 107, 178);
 
 }
 
@@ -68,24 +93,7 @@
     text-overflow: ellipsis;
 }
 
-.card_header img,
-.card_footer img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin: 10px 20px 10px 0;
-}
 
-.card_footer {
-    position: relative;
-    display: flex;
-    /* align-items: stretch; */
-}
-
-.card_footer img {
-    width: 40px;
-    height: 40px;
-}
 
 .card_like_comment {
     width: 100%;
@@ -117,14 +125,39 @@
 }
 
 
+.card_header img,
+.card_footer img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px 20px 10px 0;
+}
+
+.card_footer {
+    position: relative;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: stretch;
+
+    /* align-items: stretch; */
+}
+
+.card_footer img {
+
+    width: 40px;
+    height: 40px;
+}
+
 .write_comments {
 
-    display: block;
+position: absolute;
     margin-top: 10px;
     border-radius: 21px;
     border: 1px solid #ccc;
+    background-color: #0000000e;
     outline: none;
     padding: 10px;
     height: 42px;
-    width: 500px;
+    /* width: 500px; */
+    width: calc(100% - 60px)
 }

@@ -7,7 +7,7 @@ export const MainTemplate = () => {
     return (
         <div className="wrp">
             <header>
-                <Navigate />
+                {/* <Navigate /> */}
             </header>
             <main className="main">
                 <Outlet/>

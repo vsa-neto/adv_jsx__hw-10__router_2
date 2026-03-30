@@ -1,5 +1,5 @@
 
-import './ViewCards.css';
+import './HomePage.css';
 
 const cardsData = [
     {
@@ -54,8 +54,19 @@ const ViewCard = (id, name, status, time, content) => {
     )
 }
 
+export const HomePage = () => {
+  return (
+    <>
+    <div className="cards_header">
+        <button>Создать пост</button>
+    </div>
+    <ViewCards/>
+    </>
+  )
+};
 
-export const ViewCards = () => {
+
+const ViewCards = () => {
     return (
         cardsData.map((item) => {
             console.log(`${item.id} + ${item.name}, ${item.status}, ${item.time}, ${item.content}`);

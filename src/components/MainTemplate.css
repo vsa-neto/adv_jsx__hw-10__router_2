@@ -1,12 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+
 .wrp {
     width: 100%;
     max-width: 1000px;
     margin: auto;
-    background-color: #211025;
-    padding: 20px;
+    background-color: #0000000e;
+    padding: 10px;
     color: #b0a4a7;
 }
 
-.main {
-
-}
