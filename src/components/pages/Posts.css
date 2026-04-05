@@ -1,36 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-.cards_header {
+.cards_button {
     display: flex;
     width: calc(100% - 20px);
-    /* max-width: 600px; */
-    margin: 10px;
+    margin: 0 10px;
     height: auto;
     background-color: #ffffff;
     padding: 5px 10px;
+    justify-content: right;
 }
 
 
-.cards_header button {
-    color: #ffffff;
-    background-color: rgb(73, 107, 178);
+.click  {
+    position: relative;
+    color: rgb(255, 255, 255);
     line-height: 10px;
     border-radius: 3px;
     padding: 8px 8px 10px;
-    margin-left: auto;
+    margin-left: 10px;
 }
 
-.cards_header button:hover {
-       background-color: rgb(84, 128, 222);
-}
-.cards_header button:active {
+.click:focus {
     outline: none;
-    border: rgb(73, 107, 178);
+}
+
+.click , .click:active {
+    background-color: rgb(73, 107, 178);
+} 
+
+.click::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+     background-color: rgba(255, 255, 255, 0);
+}
+.click:hover::before{
+     background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+
+
+.on_delete, .click:active  {
+ background-color: rgb(142, 43, 64);
 }
 
 
 .card_wrp {
      width: calc(100% - 20px);
+     min-width: 600px;
     /* max-width: 600px; */
     height: auto;
     background: #ffffff;
@@ -151,6 +172,11 @@
 .write_comments {
 
 position: absolute;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
     margin-top: 10px;
     border-radius: 21px;
     border: 1px solid #ccc;

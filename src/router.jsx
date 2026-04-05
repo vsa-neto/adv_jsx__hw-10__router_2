@@ -1,11 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import { MainTemplate } from "./components/MainTemplate";
 // import { notFound } from "./components/MainTemplate";
 
-import { DriftPage } from './components/pages/Pages';
-import { HomePage } from './components/pages/HomePage';
+import { ViewCards, ViewCard } from './components/pages/Posts';
+import { NewPost } from './components/pages/NewPost';
 
-// import { HomePage } from './components/pages/HomePage';
 
 export const router = createBrowserRouter([
 
@@ -15,15 +14,22 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                // exect: true,
-                element: <HomePage />,
-                // element: <ViewCards />,
+                element: < Navigate to="/posts" replace />
             },
             {
-                path: "/drift",
-                // exect: true,
-                element: <DriftPage />,
-            }
+                path: "/posts",
+                element: <ViewCards />,
+
+            },
+            {
+                path: "/card/:id",
+                element: <ViewCard />,
+            },
+            {
+                path: "/posts/new",
+                element: <NewPost />,
+            },
+
         ]
     }
 ])
