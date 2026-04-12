@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+a {
+    color: rgb(148, 148, 148);
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
 .cards_button {
     display: flex;
     width: calc(100% - 20px);
@@ -84,7 +91,7 @@
 .card_status {
     line-height: 16px;
     padding-left: 25px;
-    background-image: url("../../../src/assets/icon.svg");
+    background-image: url("src/assets/icon.svg");
 
 
     background-size: contain;
@@ -114,8 +121,6 @@
     text-overflow: ellipsis;
 }
 
-
-
 .card_like_comment {
     width: 100%;
     border-top: solid 2px rgba(0, 0, 0, 0.1);
@@ -138,16 +143,14 @@
 
 .card_like,
 .card_comment {
-    background-image: url("../../../src/assets/like.svg");
+    background-image: url("src/assets/like.svg");
 }
 
 .card_comment {
-    background-image: url("../../../src/assets/comment.svg");
+    background-image: url("src/assets/comment.svg");
 }
 
-
-.card_header img,
-.card_footer img {
+.user_photo, .user_photo_2 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -156,14 +159,11 @@
 
 .card_footer {
     position: relative;
-    /* background-color: aqua; */
     display: flex;
     justify-content: stretch;
-
-    /* align-items: stretch; */
 }
 
-.card_footer img {
+.user_photo_2 {
 
     width: 40px;
     height: 40px;
