@@ -1,11 +1,8 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { MainTemplate } from "./components/MainTemplate";
-// import { notFound } from "./components/MainTemplate";
-
 import { ViewCards, Post } from './components/pages/Posts';
 import { NewPost } from './components/pages/NewPost';
 import { PostEdit } from './components/pages/PostEdit';
-
 
 export const router = createBrowserRouter([
 
@@ -24,7 +21,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/post/:id",
-                element: <Post/>,
+                element: <Post />,
             },
             {
                 path: "/post/new",
@@ -32,7 +29,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/post/:id/edit",
-                element: <PostEdit/>,
+                element: <PostEdit />,
             },
 
         ]

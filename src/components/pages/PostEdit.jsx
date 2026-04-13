@@ -11,16 +11,11 @@ export const PostEdit = () => {
 
     const onPostSave = () => {
         console.log(`сохранить пост пользователя с id: ${id}`);
-    setTimeout(() => {
-        navigate(-2);
-    }, 1000);
-
-
-
+        setTimeout(() => {
+            navigate(-2);
+        }, 1000);
 
     };
-
-
 
     return (
         <div className="card_wrp edit_wrp">
@@ -49,8 +44,6 @@ export const PostEdit = () => {
                 <Link className={'a edit_link link_img gif'} to='#' onClick={(e) => e.preventDefault()} >
                     GIF
                 </Link>
-
-
 
             </div>
             <div className="footer">

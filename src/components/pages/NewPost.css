@@ -1,11 +1,11 @@
-.new_card_header  {
+.new_card_header {
     display: flex;
     justify-content: left;
     align-items: center;
     margin: 0;
     padding: 0 0 15px;
-    list-style: none;
     border-bottom: 1px solid rgb(164, 164, 164);
+    /* list-style: none; */
 }
 
 .link-active {
@@ -13,24 +13,34 @@
 }
 
 .link_img {
-margin-right: 20px;
-line-height: 15px;
-padding-left: 30px;
-padding-top: 2px;
-background-size: contain;
-background-repeat: no-repeat;
-background-position: top left;
+    margin-right: 20px;
+    padding-left: 30px;
+    padding-top: 2px;
+    line-height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
 }
 
-.link_img:hover{
-
-color: rgb(66, 87, 158);
+.link_img:hover {
+    color: rgb(66, 87, 158);
 }
 
-.publication { background-image: url('src/assets/publication.svg'); }
-.photo { background-image: url('src/assets/photo.svg'); }
-.broadcast { background-image: url('src/assets/broadcast.svg'); }
-.more { background-image: url('src/assets/more.svg'); }
+.publication {
+    background-image: url('src/assets/publication.svg');
+}
+
+.photo {
+    background-image: url('src/assets/photo.svg');
+}
+
+.broadcast {
+    background-image: url('src/assets/broadcast.svg');
+}
+
+.more {
+    background-image: url('src/assets/more.svg');
+}
 
 .x {
     align-items: self-end;
@@ -41,31 +51,30 @@ color: rgb(66, 87, 158);
     background-size: 20px;
 }
 
-.x:hover{
+.x:hover {
     background-position: 0 -21px;
 }
 
 .new_card_content {
-display: flex;
+    display: flex;
 }
 
-.user_photo_new{
- width: 50px;
- height: 50px;
- /* background-image: url('src/assets/person.png'); */
+.user_photo_new {
+    width: 50px;
+    height: 50px;
 }
 
-.footer{
+.footer {
     display: flex;
     padding: 10px;
     background-color: rgb(230, 230, 230);
 }
 
-.card_wrp .footer{
+.card_wrp .footer {
     justify-content: right;
     margin: 0 -20px -20px;
 }
 
-.new_card_footer .click{
+.new_card_footer .click {
     margin-left: auto;
 }

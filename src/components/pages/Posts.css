@@ -1,24 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 a {
-    color: rgb(148, 148, 148);
     text-decoration: none;
-
+    color: rgb(148, 148, 148);
     cursor: pointer;
 }
 
 .cards_button {
     display: flex;
+    justify-content: right;
     width: calc(100% - 20px);
-    margin: 0 10px;
     height: auto;
+    margin: 0 10px;
     background-color: #ffffff;
     padding: 5px 10px;
-    justify-content: right;
 }
 
 
-.click  {
+.click {
     position: relative;
     color: rgb(255, 255, 255);
     line-height: 10px;
@@ -31,9 +30,10 @@ a {
     outline: none;
 }
 
-.click , .click:active {
+.click,
+.click:active {
     background-color: rgb(73, 107, 178);
-} 
+}
 
 .click::before {
     content: "";
@@ -42,30 +42,25 @@ a {
     left: 0px;
     width: 100%;
     height: 100%;
-     background-color: rgba(255, 255, 255, 0);
-}
-.click:hover::before{
-     background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0);
 }
 
-
-
-
-.on_delete, .click:active  {
- background-color: rgb(142, 43, 64);
+.click:hover::before {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
+.on_delete,
+.click:active {
+    background-color: rgb(142, 43, 64);
+}
 
 .card_wrp {
-     width: calc(100% - 20px);
-     min-width: 600px;
-    /* max-width: 600px; */
+    width: calc(100% - 20px);
+    min-width: 600px;
     height: auto;
-    background: #ffffff;
     padding: 20px;
     margin: 10px;
-
-
+    background: #ffffff;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -92,18 +87,13 @@ a {
     line-height: 16px;
     padding-left: 25px;
     background-image: url("src/assets/icon.svg");
-
-
     background-size: contain;
     background-repeat: no-repeat;
-
 }
 
 .user p {
     font-weight: 800;
     font-size: 14px;
-
-
 }
 
 .user p span {
@@ -115,20 +105,19 @@ a {
     font-size: 28px;
     line-height: 100%;
     font-weight: 400;
-
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .card_like_comment {
-    width: 100%;
-    border-top: solid 2px rgba(0, 0, 0, 0.1);
-    border-bottom: solid 2px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin: 15px 0;
     display: flex;
     justify-content: space-around;
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border-top: solid 2px rgba(0, 0, 0, 0.1);
+    border-bottom: solid 2px rgba(0, 0, 0, 0.1);
 }
 
 .card_like,
@@ -150,7 +139,8 @@ a {
     background-image: url("src/assets/comment.svg");
 }
 
-.user_photo, .user_photo_2 {
+.user_photo,
+.user_photo_2 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -164,26 +154,21 @@ a {
 }
 
 .user_photo_2 {
-
     width: 40px;
     height: 40px;
 }
 
 .write_comments {
-
-position: absolute;
-
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-
+    position: absolute;
+    width: calc(100% - 60px);
+    height: 42px;
     margin-top: 10px;
+    padding: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     border-radius: 21px;
     border: 1px solid #ccc;
     background-color: #0000000e;
     outline: none;
-    padding: 10px;
-    height: 42px;
-    /* width: 500px; */
-    width: calc(100% - 60px)
 }

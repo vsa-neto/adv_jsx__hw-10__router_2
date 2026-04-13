@@ -4,33 +4,25 @@ import './NewPost.css';
 export const NewPost = () => {
 
     const navigate = useNavigate();
-
-    const sendData = async () => {
+    const addPost = async () => {
         const user = {
             id: 0,
             content: "То, что введено в поле ввода",
         };
-        // console.log(user);
         // localStorage.setItem('user', JSON.stringify(user));
         try {
-            // const response = await fetch('/api/index.php', { 
-            const response = await fetch('http://localhost:8000/api/index.php', { 
-        
+            const response = await fetch('http://localhost:8000/api/index.php', {
+
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                // 'X-Requested-With': 'XMLHttpRequest',
-                body: JSON.stringify({key: "123"}),
+                body: JSON.stringify(user),
             })
             const result = await response.json()
-            .then(navigate('/posts'));
-            // console.log(result);
+                .then(navigate('/posts'));
         } catch (error) {
             console.error('Ошибка:', error);
         }
-
     };
-
-
 
     return (
         <div className="card_wrp">
@@ -56,7 +48,7 @@ export const NewPost = () => {
                 <p>Пост относящийся к курсу React</p>
             </div>
             <div className="footer">
-                <button onClick={() => sendData()} className="click">Опубликовать</button>
+                <button onClick={() => addPost()} className="click">Опубликовать</button>
             </div>
 
         </div>
