@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 import data from '/api/data.json';
 import './Posts.css';
+
+
 
 const Comments = (props) => {
     const { data } = props;
@@ -20,13 +22,40 @@ const Comments = (props) => {
 
 const ChangeDelete = (props) => {
     const { data } = props;
+    const { id } = useParams();
+    const navigate = useNavigate();
+
+    const onDelete = async () => {
+        console.log(` удалить пост с идентификатором ${id}`);
+        const status = {
+            id: 0,
+            delete: 1,
+        };
+
+        try {
+            const response = await fetch('http://localhost:8000/api/index.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(status),
+            })
+            const result = await response.json()
+                .then(navigate('/posts'));
+            console.log(result);
+        } catch (error) {
+            console.error('Ошибка:', error);
+        }
+
+    }
+
+
+
     return (
         <>
             <div className="cards_button">
                 <Link to={`/post/${data.id}/edit`}>
-                <button className="click on_change">Изменить</button>
+                    <button className="click on_change">Изменить</button>
                 </Link>
-                <button className="click on_delete">Удалить</button>
+                <button onClick={() => onDelete()} className="click on_delete">Удалить</button>
             </div>
         </>
     )

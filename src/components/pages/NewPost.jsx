@@ -19,6 +19,7 @@ export const NewPost = () => {
             })
             const result = await response.json()
                 .then(navigate('/posts'));
+            console.log(result);
         } catch (error) {
             console.error('Ошибка:', error);
         }

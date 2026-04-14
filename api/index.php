@@ -15,6 +15,11 @@ echo "\n";
 $file = 'data.json';
 $posts = json_decode(file_get_contents($file));
 
+
+if ($post->delete == 1){
+    echo $post->id;
+}
+
 if ($post) {
     $newPost = [
         'id' => $post->id,
@@ -24,6 +29,7 @@ if ($post) {
         'content' => $post->content,
     ];
     $posts[] = $newPost;
+    echo $newPost;
     $final_data = json_encode($posts, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     file_put_contents($file, $final_data);
 } else {
